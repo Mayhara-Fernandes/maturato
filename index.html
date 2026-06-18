@@ -16,11 +16,9 @@
         <div class="hero__content">
           <p class="eyebrow">Cardapio online</p>
           <h1 id="titulo">Maturato Pizzas</h1>
-          <p class="subtitle">Pizza quentinha, massa saborosa e pedido direto pelo WhatsApp.</p>
+          <p class="subtitle">Monte seu pedido, escolha meio a meio nas pizzas grandes e envie tudo direto pelo WhatsApp.</p>
           <div class="hero__actions">
-            <a class="button button--primary" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener">
-              Pedir no WhatsApp
-            </a>
+            <a class="button button--primary" href="#pedido">Montar pedido</a>
             <a class="button button--ghost" href="#cardapio">Ver cardapio</a>
           </div>
         </div>
@@ -35,6 +33,83 @@
         <div class="section__header">
           <p class="eyebrow">Escolha seu sabor</p>
           <h2 id="cardapio-titulo">Cardapio</h2>
+        </div>
+
+        <div class="order-builder" id="pedido">
+          <div class="builder-panel">
+            <p class="eyebrow">Seu pedido</p>
+            <h3>Monte sua pizza</h3>
+
+            <div class="form-row">
+              <label for="pizza-size">Tamanho</label>
+              <select id="pizza-size">
+                <option value="grande">Grande</option>
+                <option value="broto">Broto</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="flavor-one">Sabor</label>
+              <select id="flavor-one"></select>
+            </div>
+
+            <label class="check-row">
+              <input id="half-half" type="checkbox">
+              <span>Meio a meio</span>
+            </label>
+
+            <div class="form-row" id="second-flavor-row">
+              <label for="flavor-two">Segundo sabor</label>
+              <select id="flavor-two"></select>
+              <small>Disponivel somente para pizza grande. O preco final sera o da pizza mais cara.</small>
+            </div>
+
+            <button class="button button--primary" type="button" id="add-pizza">Adicionar pizza</button>
+          </div>
+
+          <div class="builder-panel">
+            <p class="eyebrow">Bebidas</p>
+            <h3>Adicionar bebida</h3>
+            <div class="drink-actions">
+              <button class="button button--ghost" type="button" data-drink="Guarana Antarctica 600ml" data-price="9">Guarana R$9,00</button>
+              <button class="button button--ghost" type="button" data-drink="Coca-Cola 600ml" data-price="9">Coca-Cola R$9,00</button>
+            </div>
+          </div>
+
+          <div class="cart-panel">
+            <p class="eyebrow">Resumo</p>
+            <h3>Carrinho</h3>
+            <div class="cart-list" id="cart-list">
+              <p class="empty-cart">Nenhum item adicionado.</p>
+            </div>
+            <div class="cart-total">
+              <span>Total</span>
+              <strong id="cart-total">R$0,00</strong>
+            </div>
+            <div class="form-row">
+              <label for="customer-name">Nome</label>
+              <input id="customer-name" type="text" placeholder="Seu nome">
+            </div>
+            <div class="form-row">
+              <label for="customer-address">Endereco</label>
+              <textarea id="customer-address" rows="3" placeholder="Rua, numero, bairro e complemento"></textarea>
+            </div>
+            <div class="form-row">
+              <label for="payment">Pagamento</label>
+              <select id="payment">
+                <option value="Pix">Pix</option>
+                <option value="Cartao">Cartao</option>
+                <option value="Dinheiro">Dinheiro</option>
+              </select>
+            </div>
+            <div class="pix-box" id="pix-box">
+              <span>Chave Pix</span>
+              <strong id="pix-key">64832883/0001-89</strong>
+              <button type="button" id="copy-pix">Copiar Pix</button>
+              <small id="copy-pix-status" aria-live="polite"></small>
+            </div>
+            <a class="button button--primary" id="send-order" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener">Enviar no WhatsApp</a>
+          </div>
         </div>
 
         <div class="menu-grid">
@@ -122,16 +197,15 @@
         <div>
           <p class="eyebrow">Pedido rapido</p>
           <h2 id="pedido-titulo">Chame no WhatsApp</h2>
-          <p>Toque no botao e abra o app com uma mensagem pronta para fazer seu pedido.</p>
+          <p>Monte o carrinho acima e o app abre o WhatsApp com tudo organizado.</p>
         </div>
-        <a class="button button--primary" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener">
-          Abrir WhatsApp
-        </a>
+        <a class="button button--primary" href="#pedido">Montar pedido</a>
       </section>
     </main>
 
     <a class="floating-whatsapp" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
       WhatsApp
     </a>
+    <script src="script.js"></script>
   </body>
 </html>

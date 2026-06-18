@@ -212,11 +212,197 @@ h3 {
 
 .menu-item,
 .drink,
-.order-band {
+.order-band,
+.builder-panel,
+.cart-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.64);
   box-shadow: 0 10px 28px rgba(45, 27, 15, 0.07);
+}
+
+.order-builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 16px;
+  margin-bottom: 28px;
+  align-items: start;
+}
+
+.builder-panel,
+.cart-panel {
+  padding: 22px;
+}
+
+.builder-panel h3,
+.cart-panel h3 {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.form-row label,
+.check-row {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.form-row select,
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  font: inherit;
+  padding: 12px;
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.form-row small {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.check-row input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--basil);
+}
+
+#second-flavor-row {
+  display: none;
+}
+
+#second-flavor-row.is-visible {
+  display: grid;
+}
+
+#add-pizza {
+  width: 100%;
+  margin-top: 18px;
+  border: 0;
+  cursor: pointer;
+}
+
+.drink-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.drink-actions .button {
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.cart-list {
+  display: grid;
+  gap: 10px;
+  min-height: 52px;
+}
+
+.empty-cart {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.cart-item strong,
+.cart-item span {
+  display: block;
+}
+
+.cart-item span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.cart-item button {
+  border: 0;
+  border-radius: 6px;
+  background: #f3ded4;
+  color: #8a241f;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 9px 10px;
+}
+
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid var(--line);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.cart-total span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.cart-total strong {
+  font-size: 1.45rem;
+}
+
+#send-order {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.pix-box {
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(33, 120, 75, 0.24);
+  border-radius: 8px;
+  background: rgba(33, 120, 75, 0.08);
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.pix-box span,
+.pix-box small {
+  color: var(--muted);
+}
+
+.pix-box strong {
+  font-size: 1.1rem;
+}
+
+.pix-box button {
+  border: 0;
+  border-radius: 6px;
+  background: var(--basil);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 11px 12px;
 }
 
 .menu-item {
@@ -349,7 +535,8 @@ h3 {
   }
 
   .menu-grid,
-  .drinks {
+  .drinks,
+  .order-builder {
     grid-template-columns: 1fr;
   }
 
