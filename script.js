@@ -84,7 +84,7 @@ function renderCart() {
 
 function updateWhatsAppLink() {
   const name = document.querySelector("#customer-name").value.trim();
-  const address = document.querySelector("#customer-address").value.trim();
+  const apartment = document.querySelector("#customer-address").value.trim();
   const payment = document.querySelector("#payment").value;
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
@@ -100,7 +100,7 @@ function updateWhatsAppLink() {
     `Total: ${formatCurrency(total)}`,
     "",
     `Nome: ${name || ""}`,
-    `Endereco: ${address || ""}`,
+    `Apartamento: ${apartment || ""}`,
     `Pagamento: ${payment}`,
     payment === "Pix" ? `Chave Pix: ${pixKey}` : "",
   ].join("\n");
