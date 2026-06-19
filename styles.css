@@ -141,59 +141,36 @@ h3 {
   place-items: center;
 }
 
-.pizza {
-  position: relative;
-  z-index: 1;
-  width: min(76vw, 390px);
-  aspect-ratio: 1;
-  border: 18px solid #d89b42;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 28%, #d84032 0 5%, transparent 5.5%),
-    radial-gradient(circle at 64% 26%, #d84032 0 5%, transparent 5.5%),
-    radial-gradient(circle at 72% 66%, #d84032 0 5%, transparent 5.5%),
-    radial-gradient(circle at 35% 70%, #d84032 0 5%, transparent 5.5%),
-    radial-gradient(circle at 50% 50%, #f2ca66 0 63%, #e6a846 64% 100%);
+.hero-photo {
+  width: min(76vw, 470px);
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
   box-shadow: var(--shadow);
 }
 
-.pizza::before,
-.pizza::after,
-.pizza span {
-  content: "";
+.photo-note {
   position: absolute;
-  background: rgba(116, 69, 31, 0.5);
-  transform-origin: center;
+  right: 12px;
+  bottom: 22px;
+  max-width: 210px;
+  border-radius: 8px;
+  background: rgba(255, 249, 240, 0.92);
+  box-shadow: 0 12px 28px rgba(45, 27, 15, 0.18);
+  padding: 14px;
 }
 
-.pizza::before {
-  left: 50%;
-  top: 0;
-  width: 3px;
-  height: 100%;
+.photo-note strong,
+.photo-note span {
+  display: block;
 }
 
-.pizza::after {
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 3px;
-}
-
-.pizza span:nth-child(1) {
-  left: 18%;
-  top: 50%;
-  width: 64%;
-  height: 3px;
-  transform: rotate(45deg);
-}
-
-.pizza span:nth-child(2) {
-  left: 18%;
-  top: 50%;
-  width: 64%;
-  height: 3px;
-  transform: rotate(-45deg);
+.photo-note span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .section {
@@ -202,6 +179,33 @@ h3 {
 
 .section__header {
   margin-bottom: 28px;
+}
+
+.section-copy {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.photo-gallery {
+  padding: 56px clamp(20px, 6vw, 88px);
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 12px 34px rgba(45, 27, 15, 0.12);
 }
 
 .menu-grid {
@@ -530,8 +534,24 @@ h3 {
     min-height: 280px;
   }
 
-  .pizza {
-    width: min(76vw, 280px);
+  .hero-photo {
+    width: 100%;
+    max-height: 360px;
+  }
+
+  .photo-note {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin-top: -18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 260px;
   }
 
   .menu-grid,
