@@ -5,25 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cardapio online de pizzas estilo italiana com borda, massa de fermentacao natural e pedidos pelo WhatsApp.">
     <title>Maturato Pizzas | Cardapio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
     <main>
+
+      <!-- HERO -->
       <section class="hero" aria-labelledby="titulo">
         <div class="hero__content">
           <p class="eyebrow">Pizza estilo italiana</p>
+
           <h1 id="titulo">Maturato Pizzas</h1>
-          <p class="subtitle">Pizzas com borda, massa de fermentacao natural e aquele acabamento dourado de forno. Monte seu pedido e envie tudo direto pelo WhatsApp.</p>
+
+          <p class="subtitle">
+            Pizzas com borda, massa de fermentacao natural e aquele acabamento
+            dourado de forno. Monte seu pedido e envie tudo direto pelo WhatsApp.
+          </p>
+
           <div class="hero__actions">
-            <a class="button button--primary" href="#pedido">Montar pedido</a>
-            <a class="button button--ghost" href="#cardapio">Ver cardapio</a>
+            <a class="button button--primary" href="#pedido">
+              Montar pedido
+            </a>
+
+            <a class="button button--ghost" href="#cardapio">
+              Ver cardapio
+            </a>
           </div>
         </div>
+
         <div class="pizza-visual">
-          <img class="hero-photo" src="./assets/pizza-italiana-1.jpg" alt="Pizza estilo italiana com borda dourada em caixa">
+          <img
+            class="hero-photo"
+            src="./assets/pizza-italiana-1.jpg"
+            alt="Pizza estilo italiana com borda dourada em caixa"
+          >
+
           <div class="photo-note">
             <strong>Massa natural</strong>
             <span>Borda alta, leve e crocante.</span>
@@ -31,196 +53,380 @@
         </div>
       </section>
 
+
+      <!-- GALERIA -->
       <section class="photo-gallery" aria-labelledby="galeria-titulo">
         <div class="section__header">
           <p class="eyebrow">Fotos proprias</p>
           <h2 id="galeria-titulo">Saindo do forno</h2>
         </div>
+
         <div class="gallery-grid">
-          <img src="./assets/pizza-italiana-2.jpg" alt="Pizza meio a meio com borda italiana">
-          <img src="./assets/pizza-italiana-3.jpg" alt="Pizza de calabresa com massa de fermentacao natural">
-          <img src="./assets/pizza-italiana-4.jpg" alt="Pizza marguerita com borda dourada">
+          <img
+            src="./assets/pizza-italiana-2.jpg"
+            alt="Pizza meio a meio com borda italiana"
+          >
+
+          <img
+            src="./assets/pizza-italiana-3.jpg"
+            alt="Pizza de calabresa com massa de fermentacao natural"
+          >
+
+          <img
+            src="./assets/pizza-italiana-4.jpg"
+            alt="Pizza marguerita com borda dourada"
+          >
         </div>
       </section>
 
+
+      <!-- CARDAPIO -->
       <section class="section" id="cardapio" aria-labelledby="cardapio-titulo">
+
         <div class="section__header">
           <p class="eyebrow">Escolha seu sabor</p>
+
           <h2 id="cardapio-titulo">Cardapio</h2>
-          <p class="section-copy">Todas as pizzas seguem o estilo italiana, com borda e massa de fermentacao natural.</p>
+
+          <p class="section-copy">
+            Todas as pizzas seguem o estilo italiana, com borda e massa de
+            fermentacao natural.
+          </p>
         </div>
 
+
+        <!-- MONTADOR DE PEDIDO -->
         <div class="order-builder" id="pedido">
+
+          <!-- ESCOLHA DA PIZZA -->
           <div class="builder-panel">
+
             <p class="eyebrow">Seu pedido</p>
+
             <h3>Monte sua pizza</h3>
 
             <div class="form-row">
               <label for="pizza-size">Tamanho</label>
+
               <select id="pizza-size">
                 <option value="grande">Grande</option>
                 <option value="broto">Broto</option>
               </select>
             </div>
 
+
             <div class="form-row">
               <label for="flavor-one">Sabor</label>
+
               <select id="flavor-one"></select>
             </div>
 
+
             <label class="check-row">
               <input id="half-half" type="checkbox">
+
               <span>Meio a meio</span>
             </label>
 
+
             <div class="form-row" id="second-flavor-row">
-              <label for="flavor-two">Segundo sabor</label>
+
+              <label for="flavor-two">
+                Segundo sabor
+              </label>
+
               <select id="flavor-two"></select>
-              <small>Disponivel somente para pizza grande. O preco final sera o da pizza mais cara.</small>
+
+              <small>
+                Disponivel somente para pizza grande.
+                O preco final sera o da pizza mais cara.
+              </small>
+
             </div>
 
-            <button class="button button--primary" type="button" id="add-pizza">Adicionar pizza</button>
+
+            <button
+              class="button button--primary"
+              type="button"
+              id="add-pizza"
+            >
+              Adicionar pizza
+            </button>
+
           </div>
 
-          <div class="builder-panel">
-            <p class="eyebrow">Bebidas</p>
-            <h3>Adicionar bebida</h3>
-            <div class="drink-actions">
-              <button class="button button--ghost" type="button" data-drink="Guarana Antarctica 600ml" data-price="9">Guarana R$9,00</button>
-              <button class="button button--ghost" type="button" data-drink="Coca-Cola 600ml" data-price="9">Coca-Cola R$9,00</button>
-            </div>
-          </div>
 
+          <!-- CARRINHO -->
           <div class="cart-panel">
+
             <p class="eyebrow">Resumo</p>
+
             <h3>Carrinho</h3>
+
             <div class="cart-list" id="cart-list">
-              <p class="empty-cart">Nenhum item adicionado.</p>
+              <p class="empty-cart">
+                Nenhum item adicionado.
+              </p>
             </div>
+
+
             <div class="cart-total">
               <span>Total</span>
-              <strong id="cart-total">R$0,00</strong>
+
+              <strong id="cart-total">
+                R$0,00
+              </strong>
             </div>
+
+
+            <!-- NOME -->
             <div class="form-row">
-              <label for="customer-name">Nome</label>
-              <input id="customer-name" type="text" placeholder="Seu nome">
+
+              <label for="customer-name">
+                Nome
+              </label>
+
+              <input
+                id="customer-name"
+                type="text"
+                placeholder="Seu nome"
+              >
+
             </div>
+
+
+            <!-- APARTAMENTO -->
             <div class="form-row">
-              <label for="customer-address">Apartamento</label>
-              <textarea id="customer-address" rows="3" placeholder="Apartamento, bloco ou referencia"></textarea>
+
+              <label for="customer-address">
+                Apartamento
+              </label>
+
+              <textarea
+                id="customer-address"
+                rows="3"
+                placeholder="Apartamento, bloco ou referencia"
+              ></textarea>
+
             </div>
+
+
+            <!-- PAGAMENTO -->
             <div class="form-row">
-              <label for="payment">Pagamento</label>
+
+              <label for="payment">
+                Pagamento
+              </label>
+
               <select id="payment">
                 <option value="Pix">Pix</option>
                 <option value="Cartao">Cartao</option>
                 <option value="Dinheiro">Dinheiro</option>
               </select>
+
             </div>
+
+
+            <!-- PIX -->
             <div class="pix-box" id="pix-box">
+
               <span>Chave Pix</span>
-              <strong id="pix-key">64832883/0001-89</strong>
-              <button type="button" id="copy-pix">Copiar Pix</button>
-              <small id="copy-pix-status" aria-live="polite"></small>
+
+              <strong id="pix-key">
+                64832883/0001-89
+              </strong>
+
+              <button type="button" id="copy-pix">
+                Copiar Pix
+              </button>
+
+              <small
+                id="copy-pix-status"
+                aria-live="polite"
+              ></small>
+
             </div>
-            <a class="button button--primary" id="send-order" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener">Enviar no WhatsApp</a>
+
+
+            <!-- WHATSAPP -->
+            <a
+              class="button button--primary"
+              id="send-order"
+              href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza."
+              target="_blank"
+              rel="noopener"
+            >
+              Enviar no WhatsApp
+            </a>
+
           </div>
+
         </div>
 
+
+        <!-- LISTA DE SABORES -->
         <div class="menu-grid">
+
           <article class="menu-item">
+
             <div>
               <h3>Mussarela</h3>
-              <p>Massa, molho de tomate, queijo mussarela.</p>
+
+              <p>
+                Massa, molho de tomate, queijo mussarela.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$59,90</span>
               <span>Broto R$49,90</span>
             </div>
+
           </article>
 
+
           <article class="menu-item">
+
             <div>
               <h3>Marguerita</h3>
-              <p>Massa, molho de tomate, queijo mussarela, tomate, manjericao e parmesao ralado.</p>
+
+              <p>
+                Massa, molho de tomate, queijo mussarela,
+                tomate, manjericao e parmesao ralado.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$59,90</span>
               <span>Broto R$49,90</span>
             </div>
+
           </article>
 
+
           <article class="menu-item menu-item--new">
+
             <div>
               <h3>Pizza de Alho</h3>
-              <p>Massa, molho de tomate, queijo mussarela, alho frito e parmesao ralado.</p>
+
+              <p>
+                Massa, molho de tomate, queijo mussarela,
+                alho frito e parmesao ralado.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$59,90</span>
               <span>Broto R$49,90</span>
             </div>
+
           </article>
+
 
           <article class="menu-item">
+
             <div>
               <h3>Calabresa Acebolada</h3>
-              <p>Massa, molho de tomate, queijo mussarela, calabresa, cebola e parmesao ralado.</p>
+
+              <p>
+                Massa, molho de tomate, queijo mussarela,
+                calabresa, cebola e parmesao ralado.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$59,90</span>
               <span>Broto R$49,90</span>
             </div>
+
           </article>
 
+
           <article class="menu-item menu-item--new">
+
             <div>
               <h3>4 Queijos</h3>
-              <p>Massa, molho de tomate, queijo mussarela, provolone, gorgonzola e parmesao ralado.</p>
+
+              <p>
+                Massa, molho de tomate, queijo mussarela,
+                provolone, gorgonzola e parmesao ralado.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$89,90</span>
               <span>Broto R$79,90</span>
             </div>
+
           </article>
 
+
           <article class="menu-item menu-item--sweet">
+
             <div>
               <h3>Doce de Leite com Amendoim</h3>
-              <p>Massa, doce de leite e amendoim.</p>
+
+              <p>
+                Massa, doce de leite e amendoim.
+              </p>
             </div>
+
             <div class="prices">
               <span>Grande R$39,90</span>
               <span>Broto R$29,90</span>
             </div>
+
           </article>
+
         </div>
+
       </section>
 
-      <section class="section section--drinks" aria-labelledby="bebidas-titulo">
-        <div class="section__header">
-          <p class="eyebrow">Para acompanhar</p>
-          <h2 id="bebidas-titulo">Bebidas</h2>
-        </div>
 
-        <div class="drinks">
-          <div class="drink"><span>Guarana Antarctica 600ml</span><strong>R$9,00</strong></div>
-          <div class="drink"><span>Coca-Cola 600ml</span><strong>R$9,00</strong></div>
-        </div>
-      </section>
-
+      <!-- CHAMADA PARA PEDIDO -->
       <section class="order-band" aria-labelledby="pedido-titulo">
+
         <div>
-          <p class="eyebrow">Pedido rapido</p>
-          <h2 id="pedido-titulo">Chame no WhatsApp</h2>
-          <p>Monte o carrinho acima e o app abre o WhatsApp com tudo organizado.</p>
+
+          <p class="eyebrow">
+            Pedido rapido
+          </p>
+
+          <h2 id="pedido-titulo">
+            Chame no WhatsApp
+          </h2>
+
+          <p>
+            Monte o carrinho acima e o app abre o WhatsApp com tudo organizado.
+          </p>
+
         </div>
-        <a class="button button--primary" href="#pedido">Montar pedido</a>
+
+        <a
+          class="button button--primary"
+          href="#pedido"
+        >
+          Montar pedido
+        </a>
+
       </section>
+
     </main>
 
-    <a class="floating-whatsapp" href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5521985793674?text=Ola%2C%20quero%20fazer%20um%20pedido%20de%20pizza."
+      target="_blank"
+      rel="noopener"
+      aria-label="Abrir conversa no WhatsApp"
+    >
       WhatsApp
     </a>
+
+
     <script src="script.js"></script>
+
   </body>
 </html>
